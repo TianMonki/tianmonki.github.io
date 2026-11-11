@@ -15,7 +15,10 @@ layout: default
   </header>
 
   <article>
-    {% if page.profile %}
+    {% comment %} Text before <!-- intro-end --> sits next to the photo; the rest goes below it {% endcomment %}
+    {% assign content_parts = content | split: '<!-- intro-end -->' %}
+    <div class="about-intro">
+      {% if page.profile %}
       <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
         {% if page.profile.image %}
           {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
@@ -36,9 +39,14 @@ layout: default
           <div class="more-info">{{ page.profile.more_info }}</div>
         {% endif %}
       </div>
-    {% endif %}
+      {% endif %}
 
-    <div class="clearfix">{{ content }}</div>
+      <div class="about-intro-text">{{ content_parts[0] }}</div>
+    </div>
+
+    {% if content_parts.size > 1 %}
+      <div class="about-body">{{ content_parts[1] }}</div>
+    {% endif %}
 
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
