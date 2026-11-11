@@ -8,6 +8,25 @@ profile:
   align: left
   image: pic.jpg
   image_circular: false # crops the image to make it circular
+  more_info: >
+    <ul class="profile-links">
+    <li><a href="mailto:xiaotian200215@163.com"><i class="fa-solid fa-envelope"></i>Email</a></li>
+    <li><a href="https://scholar.google.com/citations?user=x8c10x4AAAAJ" target="_blank" rel="noopener"><i class="fa-solid fa-graduation-cap"></i>Google Scholar</a></li>
+    <li><a href="https://github.com/tianmonki" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i>GitHub</a></li>
+    </ul>
+
+# top navigation bar (anchors to sections on this page)
+top_nav:
+  - title: About Me
+    anchor: about-me
+  - title: Publications
+    anchor: publications
+  - title: Education
+    anchor: education
+  - title: Internships
+    anchor: internships
+  - title: Honors
+    anchor: honors-and-awards
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
@@ -15,7 +34,7 @@ social: false # includes social icons at the bottom of the page
 announcements:
   enabled: false # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  limit: 5 # le·ave blank to include all the news in the `_news` folder
 
 latest_posts:
   enabled: false
@@ -31,8 +50,6 @@ Hi! I am Han Tian (田汉), a master's student at [Nankai University](https://ww
 - **Long-context extension:** efficient context window extension and long-context data synthesis.
 - **Agentic reinforcement learning:** long-horizon agent tasks, and on-policy distillation.
 - **Agent memory and multi-agent systems:** memory management for agents and multi-agent systems.
-
-<p class="profile-links"><a href="mailto:xiaotian200215@163.com"><i class="fa-solid fa-envelope"></i>Email</a><span class="sep">|</span><a href="https://scholar.google.com/citations?user=x8c10x4AAAAJ" target="_blank" rel="noopener"><i class="fa-solid fa-graduation-cap"></i>Google Scholar</a><span class="sep">|</span><a href="https://github.com/tianmonki" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i>GitHub</a></p>
 
 <!-- intro-end -->
 

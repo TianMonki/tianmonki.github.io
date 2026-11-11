@@ -61,7 +61,6 @@ ul.task-list input[type="checkbox"] {
   .more-info {
     margin-bottom: 5px;
     margin-top: 5px;
-    font-size: 0.85rem;
     overflow-wrap: anywhere;
 
     p {
@@ -69,13 +68,32 @@ ul.task-list input[type="checkbox"] {
       margin: 0;
     }
   }
+
+  // Name and subtitle under the photo, styled after leoxc1571.github.io
+  .profile-name {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  .profile-subtitle {
+    margin-top: 0.4rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
 }
 
-// Contact links below the research interests: icon + label, separated by "|"
+// Contact links under the photo: one per line, icon + label
 .profile-links {
-  margin: 1rem 0;
-  font-size: 0.9em;
-  font-weight: 500;
+  margin: 0.8rem 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.9rem;
+
+  li {
+    margin: 0 0 0.35rem;
+  }
 
   a {
     color: var(--global-text-color);
@@ -88,29 +106,70 @@ ul.task-list input[type="checkbox"] {
   }
 
   i {
-    margin-right: 0.35rem;
-  }
-
-  .sep {
-    margin: 0 0.5rem;
+    width: 1.1rem;
+    margin-right: 0.45rem;
+    text-align: center;
   }
 }
 
-// Homepage header sizes follow langfengq.github.io
-.post-header .post-title {
-  font-size: 2.2rem;
-  font-weight: 600;
+// Top navigation bar with section anchors, styled after leoxc1571.github.io
+.about-topnav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+  background-color: var(--global-bg-color);
+  border-bottom: 1px solid var(--global-divider-color);
+
+  .about-topnav-inner {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.8rem;
+    max-width: 930px;
+    margin: 0 auto;
+    padding: 0.8rem 15px;
+    font-size: 0.9rem;
+  }
+
+  a {
+    color: var(--global-text-color-light);
+
+    &:hover {
+      color: var(--global-text-color);
+      text-decoration: none;
+    }
+  }
+
+  .about-topnav-brand {
+    margin-right: 1.5rem;
+    font-weight: 600;
+  }
 }
 
-.post-header .desc {
-  font-size: 1.2rem;
-  color: var(--global-text-color-light);
+.about-topnav + .post {
+  padding-top: 2.5rem;
 }
 
-// Homepage intro: photo vertically centered next to the intro text
+@media (max-width: 575.98px) {
+  .about-topnav .about-topnav-inner {
+    gap: 0.25rem 1rem;
+  }
+
+  .about-topnav .about-topnav-brand {
+    margin-right: 0;
+  }
+}
+
+#about-me {
+  scroll-margin-top: 80px;
+}
+
+// Homepage intro: sidebar (photo, name, links) next to the intro text
 .about-intro {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 1.75rem;
 
   .profile {
@@ -158,10 +217,6 @@ ul.task-list input[type="checkbox"] {
 
   li {
     margin-bottom: 0.5rem;
-  }
-
-  p.profile-links {
-    font-size: 0.9em;
   }
 
   strong,

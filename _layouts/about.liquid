@@ -1,7 +1,21 @@
 ---
 layout: default
 ---
+<!-- Top navigation: section anchors, styled after leoxc1571.github.io -->
+{% if page.top_nav %}
+  <nav class="about-topnav">
+    <div class="about-topnav-inner">
+      <a class="about-topnav-brand" href="#">Homepage</a>
+      {% for item in page.top_nav %}
+        <a href="#{{ item.anchor }}">{{ item.title }}</a>
+      {% endfor %}
+    </div>
+  </nav>
+{% endif %}
+
 <div class="post">
+  {% comment %} Name and subtitle are shown under the profile photo instead {% endcomment %}
+  {% unless page.profile %}
   <header class="post-header">
     <h1 class="post-title">
       {% if site.title == 'blank' %}
@@ -13,11 +27,12 @@ layout: default
     </h1>
     <p class="desc">{{ page.subtitle }}</p>
   </header>
+  {% endunless %}
 
   <article>
     {% comment %} Text before <!-- intro-end --> sits next to the photo; the rest goes below it {% endcomment %}
     {% assign content_parts = content | split: '<!-- intro-end -->' %}
-    <div class="about-intro">
+    <div class="about-intro" id="about-me">
       {% if page.profile %}
       <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
         {% if page.profile.image %}
@@ -35,6 +50,8 @@ layout: default
             cache_bust=true
           %}
         {% endif %}
+        <div class="profile-name">{{ site.title }}</div>
+        <div class="profile-subtitle">{{ page.subtitle }}</div>
         {% if page.profile.more_info %}
           <div class="more-info">{{ page.profile.more_info }}</div>
         {% endif %}
