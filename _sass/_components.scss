@@ -166,10 +166,10 @@ ul.task-list input[type="checkbox"] {
   scroll-margin-top: 80px;
 }
 
-// Homepage intro: sidebar (photo, name, links) next to the intro text
+// Homepage intro: sidebar (photo, name, links) next to the intro text, vertically centered
 .about-intro {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 1.75rem;
 
   .profile {
