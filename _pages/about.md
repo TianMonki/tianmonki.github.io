@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: M.S. Student @ <a href='https://www.nankai.edu.cn/'>Nankai University</a>
+subtitle: M.S. Student @ <a href='https://www.nankai.edu.cn/'>NKU</a>
 
 profile:
   align: left
