@@ -166,6 +166,13 @@ ul.task-list input[type="checkbox"] {
   scroll-margin-top: 80px;
 }
 
+// "Updated ... | Visitors: ..." line at the bottom of the homepage
+.about-body p.site-meta {
+  margin-top: 3rem;
+  font-size: 0.85rem;
+  color: var(--global-text-color-light);
+}
+
 // Homepage intro: sidebar (photo, name, links) next to the intro text, vertically centered
 .about-intro {
   display: flex;

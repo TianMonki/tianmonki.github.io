@@ -86,3 +86,7 @@ Hi! I am Han Tian (田汉), a master's student at [Nankai University](https://ww
 
 - Tuimian Scholarship, Nankai University, 2024
 - Outstanding Graduate, Shandong University, 2024
+
+<!-- Last build date + visitor count from busuanzi (https://busuanzi.ibruce.info) -->
+<p class="site-meta">Updated {{ site.time | date: '%-m/%-d/%Y' }}.<span id="busuanzi_container_site_pv" style="display:none"> | Visitors: <span id="busuanzi_value_site_pv"></span></span></p>
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
